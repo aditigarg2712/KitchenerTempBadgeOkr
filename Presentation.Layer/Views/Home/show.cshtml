@@ -5,11 +5,9 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>show</h1>
+<h1>List</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+
 <table class="table">
     <thead>
         <tr>
@@ -45,7 +43,7 @@
             </td>
             <td>
                 @*@Html.DisplayFor(modelItem => item.PhotoUrl)*@
-                    <img src="@Url.Content(@item.PhotoUrl)" target="_blank" class="btn btn-link text-primary one" />
+                    <img src="@Url.Content(@item.PhotoUrl)" target="_blank" class="btn btn-link text-primary one" asp-append-version="true" height="100px" width="100px"/>
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Empcode)

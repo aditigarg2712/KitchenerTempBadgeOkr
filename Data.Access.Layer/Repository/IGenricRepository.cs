@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -18,6 +19,11 @@ namespace Data.Access.Layer.Repository
         public IEnumerable<Gaurd> SignOutPage(string TempBadge);
 
         public IEnumerable<MultiModelPage> GetMultiModels();
+        public IEnumerable<MultiModelPage> BadgeQueue();
         public IEnumerable<Report> GetReports();
+        public IEnumerable<Gaurd> GetNReports();
+        public IEnumerable<Gaurd> GetReports(DateTime StartDate, DateTime EndDate, string FirstName, string LastName, string Status);
+
+
     }
 }

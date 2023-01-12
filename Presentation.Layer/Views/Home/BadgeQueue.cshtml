@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Data.Access.Layer.Models.MultiModelPage>
+
+@{
+    ViewData["Title"] = "BadgeQueue";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3>BadgeQueuePage</h3>
+<br>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Badge</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td> <img src="@Url.Content(@item.PhotoUrl)" height="100px" width="100px" /></td>
+                <td>@item.Name</td>
+                <td>@item.TempBadge</td>
+                <td>@item.Status</td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -72,7 +72,7 @@ namespace Presentation.Layer.Controllers
             if (ModelState.IsValid)
             {
 
-                var result = await signInManager.PasswordSignInAsync(model.Email, model.Password, isPersistent: false, false);
+                var result = await signInManager.PasswordSignInAsync(model.Email, model.Password, isPersistent: true, false);
                 if (result.Succeeded)
                 {
                     //await signInManager.SignInAsync(user, isPersistent: false);

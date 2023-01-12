@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Data.Access.Layer.Migrations
 {
     [DbContext(typeof(KitchenerTempBadgeContext))]
-    [Migration("20221227061833_initial")]
-    partial class initial
+    [Migration("20221228060710_First")]
+    partial class First
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -19,6 +19,7 @@ public partial class Gaurd
     public DateTime SignOut { get; set; }
 
     public int EmpCode { get; set; }
+   
 
     public virtual Employee EmpCodeNavigation { get; set; } = null!;
 }

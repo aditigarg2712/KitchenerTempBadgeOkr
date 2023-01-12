@@ -6,24 +6,23 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>BadgeOutPage</h1>
+<h3>BadgeOutPage</h3>
+<br>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+
 <table class="table">
     <thead>
         <tr>
             <th>Image</th>
             <th>Name</th>
             <th>Badge</th>
-            <th>Assign Time</th>
+            <th>Assign Time(in sec)</th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model) {
         <tr>
-                <td>@item.PhotoUrl</td>
+                <td> <img src="@Url.Content(@item.PhotoUrl)" height="100px" width="100px"/></td>
                 <td>@item.Name</td>
                 <td>@item.TempBadge</td>
                 <td>@item.AssignTime</td>

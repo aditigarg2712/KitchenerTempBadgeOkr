@@ -13,6 +13,7 @@ namespace Data.Access.Layer.Models
         public string TempBadge { get; set; } = null!;
             
         public int AssignTime { get; set; }
+        public string Status { get; set; }
         
 
     }

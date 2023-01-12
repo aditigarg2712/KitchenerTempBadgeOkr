@@ -12,6 +12,7 @@ namespace Data.Access.Layer.Models
         public string TempBadge { get; set; } = null!;
         public DateTime SignIn { get; set; }
         public int AssignTime { get; set; }
-        public DateTime SignOut { get; set; }
+        public string SignOut { get; set; }
+        public string Status { get; set; } 
     }
 }

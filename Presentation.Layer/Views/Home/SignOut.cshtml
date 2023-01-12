@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Data.Access.Layer.Models.MultiModelPage>
+
+@{
+    ViewData["Title"] = "SignOut";
+}
+
+<h3>SignOut</h3>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Badge</th>
+            <th>SignOut</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @item.Name
+            </td>
+            <td>
+                @item.TempBadge
+            </td>
+            <td>
+                @item.
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

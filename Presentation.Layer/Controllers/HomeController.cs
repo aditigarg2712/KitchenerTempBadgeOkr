@@ -47,8 +47,9 @@ namespace Presentation.Layer.Controllers
         [HttpGet]
         public IActionResult Badge(string fn, string ln, int ecode)
         {
+            _guardService.SignInBadge(fn, ln, ecode);
 
-            return View(_guardService.SignInBadge(fn, ln, ecode));
+            return View("Index");
         }
 
         [HttpGet]
@@ -80,17 +81,35 @@ namespace Presentation.Layer.Controllers
             return View();
 
         }
-
+        [Authorize]
         public IActionResult BadgeOutPage()
         {
             return View(_guardService.GetMultiModels());
         }
-
-        public IActionResult BadgeReportPage()
+        [Authorize]
+        public IActionResult BadgeQueue()
         {
-            return View(_guardService.GetReports());
+            return View(_guardService.BadgeQueue());
         }
 
+        [Authorize]
+        [HttpPost]
+        public IActionResult BadgeReportPage(DateTime StartDate, DateTime EndDate, string FirstName, string LastName, string Status)
+        {
+            return View(_guardService.GetReports(StartDate, EndDate, FirstName, LastName, Status));
+
+
+
+        }
+        [Authorize]
+        [HttpGet]
+        public IActionResult BadgeReportPage()
+        {
+            return View(_guardService.GetNReports());
+
+
+
+        }
         /*[HttpGet]
         public IActionResult SignOut(int id)
         {
